@@ -1,8 +1,3 @@
->>>>>>> parent of 7b284e4... one
-Five five five five======
-Six Six Six Six Six=
-The end of this test-12/14/2016
-checking on deploy stuff
-one one one one one
-three three three three
-two two two two two
+added an additional line so that i can trell whether i getting this tsuff right
+just working late today ut uess what CMis fun
+working on reverting this line from the file hope it works
