@@ -1,13 +1,8 @@
-<<<<<<< HEAD
+>>>>>>> parent of 7b284e4... one
+Five five five five======
+Six Six Six Six Six=
+The end of this test-12/14/2016
+checking on deploy stuff
 one one one one one
-two two two two two
 three three three three
-=======
-<<<<<<< HEAD
-one one one one
-=======
-one one one one one
 two two two two two
-three three three three
->>>>>>> new-branch
->>>>>>> master
