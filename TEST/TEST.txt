@@ -1,3 +1,4 @@
 testing copying files/directory from one location on ur desktop to a branch
 09/05/2019 14:33pm
 checking wether AWS works we know its just a fools errand
+trying 09/09/2019 4:28PM
