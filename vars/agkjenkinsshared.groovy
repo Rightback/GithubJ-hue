@@ -7,10 +7,10 @@ def call(Map agkpipeline=[:]) {
                 steps {
 	            sh 'pwd'
 		    sh 'ls -la'
-		    sh 'sfdx scanner:run --target agkpipeline.loc --pmdconfig ./config/pmd/apex_ruleset.xml'
+		    sh 'sfdx scanner:run --target agkpipeline.lic --pmdconfig ./config/pmd/apex_ruleset.xml'
 		    sh 'rm -rf testresults.xml'
 		    sh 'touch testresults.xml'
-		    sh 'sfdx scanner:run --target agkpipeline.loc  --pmdconfig ./config/pmd/apex_ruleset.xml --format junit --outfile testresults.xml'
+		    sh 'sfdx scanner:run --target agkpipeline.may  --pmdconfig ./config/pmd/apex_ruleset.xml --format junit --outfile testresults.xml'
 		    sh 'cat testresults.xml'
 		    sh '''
                         #!/bin/bash
