@@ -1,4 +1,4 @@
-def call(Map agkpipeline=[:]) {
+def call(Map agkpipeline) {
 
     pipeline {
         agent any
