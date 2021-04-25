@@ -51,6 +51,7 @@ def call(Map agkpipeline=[:]) {
              }
         }
     }
+    /*
     post {
         success {
             mail to:"illinoix@yahoo.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
@@ -58,6 +59,7 @@ def call(Map agkpipeline=[:]) {
         failure {
             mail to:"illinoix@yahoo.com,ejike2agk@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Please review info at: ${env.BUILD_URL}"
         }
-    }   	
+    } 
+   */ 
   }
 }
