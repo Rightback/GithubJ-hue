@@ -16,6 +16,8 @@ def call(body) {
 		    sh 'touch testresults.xml'
 		    sh 'sfdx scanner:run --target agkpipeline.may  --pmdconfig ./config/pmd/apex_ruleset.xml --format junit --outfile testresults.xml'
 		    sh 'cat testresults.xml'
+		    echo 'agkpipeline.lic'
+		    echo agkpipeline.lic
 		    sh '''
                         #!/bin/bash
                         if grep -q 'type="5"' "./testresults.xml"; then
