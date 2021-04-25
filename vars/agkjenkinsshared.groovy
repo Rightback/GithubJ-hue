@@ -7,7 +7,6 @@ def call(Map agkpipeline) {
                 steps {
 	            sh 'pwd'
 		    sh 'ls -la'
-		   #sh 'sfdx scanner:run --target agkpipeline.lic --pmdconfig ./config/pmd/apex_ruleset.xml'
 		    sh agkpipeline.lic
 		    sh 'rm -rf testresults.xml'
 		    sh 'touch testresults.xml'
