@@ -1,9 +1,5 @@
-def call(body) {
-    def agkpipeline= [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = agkpipeline
-    body()
-
+def call(Map agkpipeline) {
+    
     pipeline {
         agent any
         stages {
