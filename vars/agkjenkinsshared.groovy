@@ -7,13 +7,13 @@ def call(Map agkpipeline) {
                 steps {
 	            sh 'pwd'
 		    sh 'ls -la'
-		    sh agkpipeline.lic
+		    sh agkpipeline.poc
 		    sh 'rm -rf testresults.xml'
 		    sh 'touch testresults.xml'
 		    sh 'sfdx scanner:run --target agkpipeline.may  --pmdconfig ./config/pmd/apex_ruleset.xml --format junit --outfile testresults.xml'
 		    sh 'cat testresults.xml'
-		    echo 'agkpipeline.lic'
-		    echo agkpipeline.lic
+		    echo 'agkpipeline.poc'
+		    echo agkpipeline.poc
 		    sh '''
                         #!/bin/bash
                         if grep -q 'type="5"' "./testresults.xml"; then
@@ -53,15 +53,13 @@ def call(Map agkpipeline) {
              }
         }
     }
-    /*
     post {
         success {
-            mail to:"illinoix@yahoo.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
+            mail to: agkpipeline.poc1, subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
         }
         failure {
-            mail to:"illinoix@yahoo.com,ejike2agk@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Please review info at: ${env.BUILD_URL}"
+            mail to: agkpipeline.poc1, subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Please review info at: ${env.BUILD_URL}"
         }
-    } 
-   */ 
+    }  
   }
 }
