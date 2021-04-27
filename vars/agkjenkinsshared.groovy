@@ -38,6 +38,7 @@ def call(Map agkpipeline) {
           }
           stage('Authenticate') {
 	      steps {
+	          echo agkpipeline.sand
 	          sh '''
                       #!/bin/bash
 		      INSTANCE_URL="https://login.salesforce.com"
@@ -53,6 +54,7 @@ def call(Map agkpipeline) {
              }
         }
     }
+    /*
     post {
         success {
             mail to: agkpipeline.poc1, subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
@@ -61,5 +63,6 @@ def call(Map agkpipeline) {
             mail to: agkpipeline.poc1, subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Please review info at: ${env.BUILD_URL}"
         }
     }  
+   */ 
   }
 }
