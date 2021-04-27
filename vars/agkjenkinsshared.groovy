@@ -41,6 +41,7 @@ def call(Map agkpipeline) {
 	          echo agkpipeline.sand
 	          sh '''
                       #!/bin/bash
+		      echo agkpipeline.sand
 		      $sand1
 		      INSTANCE_URL="https://login.salesforce.com"
                       CLIENT_ID="3MVG9ZF4bs_.MKujkw6ZG8mm2riWYl_WPVCg6Mhj5XjZ0ioVY1heGMLB1ahrkTs9TIZwbZCR5IQMUbkfglBwp"
