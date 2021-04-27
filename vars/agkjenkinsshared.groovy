@@ -39,6 +39,7 @@ def call(Map agkpipeline) {
           stage('Authenticate') {
 	      steps {
 	          echo agkpipeline.sand
+		  sand1=$(echo agkpipeline.sand)
 	          sh '''
                       #!/bin/bash
 		      $sand1
