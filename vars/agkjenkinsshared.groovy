@@ -49,8 +49,6 @@ def call(Map agkpipeline) {
                       USERNAME="admin2@libertysalesforce.org"
                       echo "Start Authentication"
                       echo "Stop Authentication"
-		      echo $BUILD_USER_ID
-		      echo $BUILD_USER
                 }
             }
         }
