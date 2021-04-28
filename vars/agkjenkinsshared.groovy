@@ -39,12 +39,14 @@ def call(Map agkpipeline) {
           }
 	  
           stage('Authenticate') {
+	      steps{
 	        script{
 	          if (agkpipeline.deploy1){
                       echo "Start Authentication"
                       echo "Stop Authentication"
                   }
-            }
+              }
+	    } 
 	 }   
      }	
     /*
