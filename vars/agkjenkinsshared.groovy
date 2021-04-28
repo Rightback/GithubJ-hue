@@ -1,4 +1,4 @@
-def call(Map agkpipeline) {
+def call(Map agkpipeline, onyipipeline) {
     
     pipeline {
         agent any
@@ -49,6 +49,7 @@ def call(Map agkpipeline) {
                       USERNAME="admin2@libertysalesforce.org"
                       echo "Start Authentication"
                       echo "Stop Authentication"
+		      echo 
 		      echo (INSTANCE_URL + var)
                 }
             }
