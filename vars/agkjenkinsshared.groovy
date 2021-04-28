@@ -2,9 +2,6 @@ def call(Map agkpipeline) {
     
     pipeline {
         agent any
-	environment {
-        
-	}
         stages {
             stage('Scan') {
                 steps {
