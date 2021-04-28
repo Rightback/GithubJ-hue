@@ -56,6 +56,7 @@ def call(Map agkpipeline) {
                 }
             }
         }
+     }	
     /*
     post {
         success {
