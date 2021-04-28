@@ -8,6 +8,7 @@ def call(Map agkpipeline, onyipipeline) {
 	            sh 'pwd'
 		    sh 'ls -la'
 		    sh agkpipeline.poc
+		    sh onyipipeline.doc
 		    sh 'rm -rf testresults.xml'
 		    sh 'touch testresults.xml'
 		    sh 'sfdx scanner:run --target agkpipeline.may  --pmdconfig ./config/pmd/apex_ruleset.xml --format junit --outfile testresults.xml'
