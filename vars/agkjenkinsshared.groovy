@@ -41,7 +41,7 @@ def call(Map agkpipeline) {
 	          echo agkpipeline.sand
 		  script {
 		      echo agkpipeline.sand
-		      sand1=$(echo agkpipeline.sand)
+		      sand1 = (echo agkpipeline.sand)
 		      echo $sand1
 		      agkpipeline.sand
 		      INSTANCE_URL="https://login.salesforce.com"
