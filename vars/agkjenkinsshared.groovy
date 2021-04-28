@@ -2,6 +2,9 @@ def call(Map agkpipeline) {
     
     pipeline {
         agent any
+	environment {
+        
+	}
         stages {
             stage('Scan') {
                 steps {
@@ -39,8 +42,8 @@ def call(Map agkpipeline) {
           stage('Authenticate') {
 	      steps {
 	          echo agkpipeline.sand
-	          sh '''
-                      #!/bin/bash
+		  script {
+		      echo agkpipeline.sand
 		      agkpipeline.sand
 		      INSTANCE_URL="https://login.salesforce.com"
                       CLIENT_ID="3MVG9ZF4bs_.MKujkw6ZG8mm2riWYl_WPVCg6Mhj5XjZ0ioVY1heGMLB1ahrkTs9TIZwbZCR5IQMUbkfglBwp"
@@ -51,10 +54,9 @@ def call(Map agkpipeline) {
                       echo "Stop Authentication"
 		      echo $BUILD_USER_ID
 		      echo $BUILD_USER
-                  '''
-             }
+                }
+            }
         }
-    }
     /*
     post {
         success {
