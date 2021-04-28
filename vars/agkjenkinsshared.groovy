@@ -49,6 +49,7 @@ def call(Map agkpipeline) {
                       USERNAME="admin2@libertysalesforce.org"
                       echo "Start Authentication"
                       echo "Stop Authentication"
+		      sfdx scanner:run --target ./force-app/main/default/classes/ --pmdconfig ./config/pmd/apex_ruleset.xml"
                 }
             }
         }
