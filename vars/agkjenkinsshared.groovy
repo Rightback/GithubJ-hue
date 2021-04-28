@@ -49,6 +49,7 @@ def call(Map agkpipeline) {
                       USERNAME="admin2@libertysalesforce.org"
                       echo "Start Authentication"
                       echo "Stop Authentication"
+		      echo $INSTANCE_URL
                 }
             }
         }
