@@ -38,6 +38,7 @@ def call(Map agkpipeline, onyipipeline) {
                     '''
                  }
           }
+	  /*
           stage('Authenticate') {
 	      steps {
 	          echo agkpipeline.sand
@@ -55,6 +56,7 @@ def call(Map agkpipeline, onyipipeline) {
                 }
             }
         }
+      */
      }	
     /*
     post {
