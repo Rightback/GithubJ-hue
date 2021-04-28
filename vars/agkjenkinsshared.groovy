@@ -16,6 +16,7 @@ def call(Map agkpipeline) {
 		    echo agkpipeline.poc
 		    sh '''
                         #!/bin/bash
+			echo agkpipeline.sand
                         if grep -q 'type="5"' "./testresults.xml"; then
                         rm -rf testresult.xml
                         #exit 1
