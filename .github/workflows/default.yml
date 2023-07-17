@@ -1,0 +1,16 @@
+Adding somethign for today
+Rename a branch
+git checkout <branch you want to rename>
+git branch -m <new branch name>
+
+also you can create myfeature branch off dev branch
+$ git checkout -b myfeature dev
+$ git push origin myfeature
+
+
+To create a tag on your current branch, run this:
+git tag -a <tagname> -m <tag_message>
+git push origin <tagname>
+
+Tag List
+git tag -n checkout
